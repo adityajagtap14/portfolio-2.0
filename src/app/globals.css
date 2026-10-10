@@ -64,7 +64,8 @@ html {
 }
 
 /* Lenis smooth scroll integration */
-html.lenis, html.lenis body {
+html.lenis,
+html.lenis body {
   height: auto;
 }
 
@@ -93,13 +94,16 @@ body {
 ::-webkit-scrollbar {
   width: 6px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--color-bg-primary);
 }
+
 ::-webkit-scrollbar-thumb {
   background: rgba(124, 92, 252, 0.3);
   border-radius: 999px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(124, 92, 252, 0.5);
 }
@@ -159,10 +163,23 @@ body {
 }
 
 @keyframes float-orb {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  25%      { transform: translate(40px, -30px) scale(1.05); }
-  50%      { transform: translate(-20px, 50px) scale(0.95); }
-  75%      { transform: translate(30px, 20px) scale(1.02); }
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  25% {
+    transform: translate(40px, -30px) scale(1.05);
+  }
+
+  50% {
+    transform: translate(-20px, 50px) scale(0.95);
+  }
+
+  75% {
+    transform: translate(30px, 20px) scale(1.02);
+  }
 }
 
 /* ========================================================================
@@ -302,8 +319,8 @@ body {
   z-index: 99999;
   mix-blend-mode: difference;
   transition: width 0.3s var(--ease-out-expo),
-              height 0.3s var(--ease-out-expo),
-              background 0.3s;
+    height 0.3s var(--ease-out-expo),
+    background 0.3s;
 }
 
 .custom-cursor--hover {
@@ -324,9 +341,9 @@ body {
   pointer-events: none;
   z-index: 99998;
   transition: width 0.4s var(--ease-out-expo),
-              height 0.4s var(--ease-out-expo),
-              border-color 0.3s,
-              opacity 0.3s;
+    height 0.4s var(--ease-out-expo),
+    border-color 0.3s,
+    opacity 0.3s;
 }
 
 .custom-cursor-ring--hover {
@@ -398,10 +415,12 @@ body {
   body {
     cursor: auto;
   }
+
   .custom-cursor,
   .custom-cursor-ring {
     display: none !important;
   }
+
   .gradient-orb {
     opacity: 0.5;
   }
